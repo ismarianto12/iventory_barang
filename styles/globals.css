@@ -19,6 +19,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
@@ -28,3 +29,13 @@ a {
 /* nav>#sidebarMenu{
  background: red;
 } */
+
+
+.card {
+  border-radius: unset;
+  border:unset;
+}
+
+.card-header {
+  border-bottom: unset;
+}
