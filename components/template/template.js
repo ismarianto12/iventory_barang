@@ -10,7 +10,7 @@ const Template = ({ container }) => {
             <header className="navbar navbar-dark sticky-top bg-light flex-md-nowrap p-0 shadow">
                 <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#" style={{
                     'color': '#000'
-                }}>Company name</a>
+                }}>Administrator</a>
                 <Icon.Menu />
                 <button className="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
@@ -26,6 +26,7 @@ const Template = ({ container }) => {
             </header>
             <div className="container-fluid">
                 <div className="row">
+                    <br /><br />
                     <Sidebar />
                     <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                         <div className="pt-3 pb-2 mb-3 border-bottom">

@@ -34,7 +34,10 @@ const Barang = () => {
             <Head>
                 <title>{'Data Master barang'}</title>
             </Head>
-            <Button className='btn btn-info btn-sm float-left' variant="primary" onClick={() => setShow(true)} style={{ 'float': 'right' }}>
+            <Button className='btn btn-info btn-sm float-left' variant="primary" onClick={() => setShow(true)} style={{
+                'float': 'right',
+                'color': '#fff'
+            }}>
                 <Icon.Plus /> Tambah data Barang
             </Button>
             <Table />

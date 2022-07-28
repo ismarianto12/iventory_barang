@@ -2,27 +2,27 @@ import * as Icon from 'react-feather'
 const menu = [
     {
         'name': 'Dashboard',
-        'url': '/admin/dashboard',
+        'url': '/dashboard',
         'icon': <Icon.Home />
     },
     {
         'name': 'Penjualan',
-        'url': '/admin/penjualan',
+        'url': '/penjualan',
         'icon': <Icon.DollarSign />
     }, {
         'name': 'Return',
-        'url': '/admin/return',
+        'url': '/return',
         'icon': <Icon.SkipBack />
     }, {
 
         'name': 'Barang',
-        'url': '/admin/barang',
+        'url': '/barang',
         'icon': <Icon.Tool />
     },
     {
 
         'name': 'Jenis',
-        'url': '/admin/jenis',
+        'url': '/jenis',
         'icon': <Icon.MapPin />
     }
 ]

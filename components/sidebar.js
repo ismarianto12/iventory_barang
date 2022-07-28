@@ -7,15 +7,20 @@ const Sidebar = () => {
 
         <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse">
             <div className="position-sticky pt-3">
-
-
+                <h4 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span><Icon.UserPlus />Company name</span>
+                    <a className="link-secondary" href="#" aria-label="Add a new report">
+                        <span data-feather="plus-circle" />
+                    </a>
+                </h4>
+                <br />
                 <ul className="nav flex-column">
 
                     {menudata.map((a, j) => {
                         return (<><li
                             className="nav-item">
                             <Link href={`${a.url}`}>
-                                <a className={j == 1 ? "nav-link active" : "nav-link"} href="#">
+                                <a className={j == 0 ? "nav-link active" : "nav-link"} href="#">
                                     {a.icon}
                                     {a.name}
                                 </a>
