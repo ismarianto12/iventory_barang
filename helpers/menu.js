@@ -20,10 +20,15 @@ const menu = [
         'icon': <Icon.Tool />
     },
     {
-
         'name': 'Jenis',
         'url': '/jenis',
         'icon': <Icon.MapPin />
+    },
+    {
+
+        'name': 'Report',
+        'url': '/report',
+        'icon': <Icon.AlignLeft />
     }
 ]
 export default menu

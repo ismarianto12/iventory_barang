@@ -1,13 +1,16 @@
 import { Modal, Button } from 'react-bootstrap'
 import * as Icon from 'react-feather'
+import { PencarianBarang } from './PencarianBarang'
 
 const Cpenjualan = ({ show, barang }) => {
 
-
+    const tampilpencarian = () => {
+        return (<PencarianBarang data={databarang} />)
+    }
     return (
         <>
             <Modal
-                show={show} 
+                show={show}
                 onHide={() => {
                     setShow(false)
                 }}
@@ -50,7 +53,7 @@ const Cpenjualan = ({ show, barang }) => {
                                         </td>
                                         <td>
                                             <button className="btn btn-warning btn-sm" onClick={() => {
-                                             
+
 
                                             }} type="reset"><Icon.Plus></Icon.Plus> </button>
                                         </td>
@@ -128,7 +131,7 @@ const Cpenjualan = ({ show, barang }) => {
                                     <div className="form-group row">
                                         <label className="col-md-4 form-label" style={{ 'color': '#000' }}><b>Barang</b></label>
                                         <div className="col-md-7">
-                                            <input type={'text'} name="username" className="form-control" value=""></input>
+                                            <input type={'text'} name="barang" className="form-control" value="" onChange={tampilpencarian}></input>
 
                                         </div>
                                     </div>
@@ -160,11 +163,15 @@ const Cpenjualan = ({ show, barang }) => {
                                     </div>
                                     <br />
                                     <div className="form-group row">
-                                        <button type="submit" className="btn btn-info col-md-5" onClick={() => {
+                                        <div className='button-group row'>
+                                            <button type="submit" className="btn btn-info col-md-5" onClick={() => {
 
-                                        }}><Icon.Save /> Tambahkan</button>
-                                        <button className="btn btn-warning col-md-6" type="reset"><Icon.RefreshCcw />  Reset</button>
+                                            }}><Icon.Save /> Tambahkan</button>
+                                            <button className="btn btn-warning col-md-6" type="reset"><Icon.RefreshCcw />  Reset</button>
+
+                                        </div>
                                     </div>
+
 
 
                                 </form>

@@ -58,16 +58,23 @@ const Wrapper = styled.div`
   td{font-size:30px}
 `;
 
+const styles = theme => ({
+    tablecell: {
+      fontSize: '30px',
+    },
+  }); 
+
 export const Table = () => {
 
     const columns = [
         {
             name: 'Kode',
-            selector: row => row.title,
             style: {
                 background: "#ddd",
                 fontSize: '15px'
             },
+            selector: row => row.title,
+            
         },
         {
             name: 'Jenis',
@@ -103,6 +110,7 @@ export const Table = () => {
                 customTheme={myNewTheme}
                 onSort={() => console.log('onSort')}
                 onSetPage={() => console.log('onSetPage')}
+                className={styles.tablecell}
             />
         </Wrapper>
     );
