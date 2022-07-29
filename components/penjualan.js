@@ -1,69 +1,16 @@
 import { Modal, Button } from 'react-bootstrap'
+import { useState } from 'react'
 import * as Icon from 'react-feather'
+import { PencarianBarang } from './PencarianBarang'
 
-const Cpenjualan = ({ show, barang }) => {
+const Cpenjualan = () => {
 
+    const [show, setShow] = useState(false)
+    const [barang, setBarang] = useState([])
 
     return (
         <>
-            <Modal
-                show={show} 
-                onHide={() => {
-                    setShow(false)
-                }}
-                size="lg"
-                aria-labelledby="example-custom-modal-styling-title"
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title id="example-custom-modal-styling-title">
-                        <Icon.Box /> Data Barang
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <table className="table table-striped">
-                        <tr>
-                            <th>
-                                @
-                            </th>
-                            <th>
-                                Nama barang
-                            </th>
-                            <th>
-                                Harga
-                            </th> <th>
-                                Jenis
-                            </th>
-                        </tr>
-                        <tbody>
-                            {
-                                barang.map((a) => {
-
-                                    return (<><tr>
-                                        <td>
-                                            {j + 1}
-                                        </td>
-                                        <td>
-                                            {a.name}
-                                        </td>
-                                        <td>
-                                            {a.price}
-                                        </td>
-                                        <td>
-                                            <button className="btn btn-warning btn-sm" onClick={() => {
-                                             
-
-                                            }} type="reset"><Icon.Plus></Icon.Plus> </button>
-                                        </td>
-                                    </tr></>)
-
-                                })
-
-                            }
-                        </tbody>
-
-                    </table>
-                </Modal.Body>
-            </Modal>
+            <PencarianBarang show={show} hide={setShow(false)} />
             <div className="container">
                 <div className="row">
                     <div className='title' style={{
@@ -128,7 +75,7 @@ const Cpenjualan = ({ show, barang }) => {
                                     <div className="form-group row">
                                         <label className="col-md-4 form-label" style={{ 'color': '#000' }}><b>Barang</b></label>
                                         <div className="col-md-7">
-                                            <input type={'text'} name="username" className="form-control" value=""></input>
+                                            <input type={'text'} name="barang" className="form-control" value="" onChange={() => setShow(true)}></input>
 
                                         </div>
                                     </div>
@@ -160,11 +107,15 @@ const Cpenjualan = ({ show, barang }) => {
                                     </div>
                                     <br />
                                     <div className="form-group row">
-                                        <button type="submit" className="btn btn-info col-md-5" onClick={() => {
+                                        <div className='button-group row'>
+                                            <button type="submit" className="btn btn-info col-md-5" onClick={() => {
 
-                                        }}><Icon.Save /> Tambahkan</button>
-                                        <button className="btn btn-warning col-md-6" type="reset"><Icon.RefreshCcw />  Reset</button>
+                                            }}><Icon.Save /> Tambahkan</button>
+                                            <button className="btn btn-warning col-md-6" type="reset"><Icon.RefreshCcw />  Reset</button>
+
+                                        </div>
                                     </div>
+
 
 
                                 </form>

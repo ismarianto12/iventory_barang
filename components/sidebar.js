@@ -2,7 +2,10 @@
 import menudata from '../helpers/menu'
 import Link from 'next/link'
 import * as Icon from 'react-feather'
+import { useRouter } from 'next/router'
+
 const Sidebar = () => {
+    const router = useRouter()
     return (
 
         <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse">
@@ -17,10 +20,11 @@ const Sidebar = () => {
                 <ul className="nav flex-column">
 
                     {menudata.map((a, j) => {
+
                         return (<><li
                             className="nav-item">
                             <Link href={`${a.url}`}>
-                                <a className={j == 0 ? "nav-link active" : "nav-link"} href="#">
+                                <a className={router.pathname === a.url ? "nav-link active" : "nav-link"} href="#">
                                     {a.icon}
                                     {a.name}
                                 </a>
