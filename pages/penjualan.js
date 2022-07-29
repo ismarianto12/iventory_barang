@@ -7,8 +7,8 @@ import { PencarianBarang } from "../components/PencarianBarang";
 
 
 const Penjualan = () => {
-    // const
     const [show, setShow] = useState(false)
+
     const [barang, setBarang] = useState([])
     const databarang = [];
 
@@ -18,8 +18,7 @@ const Penjualan = () => {
             <Head>
                 <title>Dashboard</title>
             </Head>
-           
-            <Cpenjualan show={show} barang={barang} />
+            <Cpenjualan />
 
         </>
 

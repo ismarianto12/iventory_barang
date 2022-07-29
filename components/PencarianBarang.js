@@ -1,7 +1,7 @@
 import { Modal, Button } from 'react-bootstrap'
 import * as Icon from 'react-feather'
 
-export const PencarianBarang = (data, show, hide) => {
+export const PencarianBarang = ({ show, hide }) => {
     return (<>
         <Modal
             show={show}
@@ -15,7 +15,7 @@ export const PencarianBarang = (data, show, hide) => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                
+
 
             </Modal.Body>
         </Modal>
